@@ -1,0 +1,222 @@
+3
+Ancestor(Liz,Bob) 
+Ancestor(Liz,Billy) 
+Mother(Eve, Adams)
+6 
+Mother(Liz,Charley) 
+Father(Charley,Billy) 
+((~Mother(x,y)) | Parent(x,y)) 
+((~Father(x,y)) | Parent(x,y)) 
+((~Parent(x,y)) | Ancestor(x,y)) 
+((~(Parent(x,y) & Ancestor(y,z))) | Ancestor(x,z)) 
+
+
+
+6 
+F(Bob) 
+H(John) 
+~H(Alice) 
+~H(John) 
+G(Bob) 
+G(Tom) 
+14 
+(A(x) => H(x)) 
+(D(x,y) => (~H(y))) 
+((B(x,y) & C(x,y)) => A(x)) 
+B(John,Alice) 
+B(John,Bob) 
+((D(x,y) & Q(y)) => C(x,y)) 
+D(John,Alice) 
+Q(Bob) 
+D(John,Bob) 
+(F(x) => G(x)) 
+(G(x) => H(x)) 
+(H(x) => F(x)) 
+(R(x) => H(x)) 
+R(Tom) 
+------------------
+
+1
+H(John) 
+14 
+(A(x) => H(x)) 
+(D(x,y) => (~H(y))) 
+((B(x,y) & C(x,y)) => A(x)) 
+B(John,Alice) 
+B(John,Bob) 
+((D(x,y) & Q(y)) => C(x,y)) 
+D(John,Alice) 
+Q(Bob) 
+D(John,Bob) 
+(F(x) => G(x)) 
+(G(x) => H(x)) 
+(H(x) => F(x)) 
+(R(x) => H(x)) 
+R(Tom) 
+
+------------
+
+2
+F(John)
+B(Bob)
+6
+(A(x)=>B(x))
+(B(x)=>C(x))
+(D(x)=>E(x))
+(C(x)=>D(x))
+(E(x)=>F(x))
+(A(Bob)&B(John))
+------------
+6
+F(Bob)
+H(John)
+~H(Alice)
+~H(John)
+G(Bob)
+G(Tom)
+14
+(A(x) => H(x))
+(D(x,y) => (~H(y)))
+((B(x,y) & C(x,y)) => A(x))
+B(John,Alice)
+B(John,Bob)
+((D(x,y) & Q(y)) => C(x,y))
+D(John,Alice)
+Q(Bob)
+D(John,Bob)
+(F(x) => G(x))
+(G(x) => H(x))
+(H(x) => F(x))
+(R(x) => H(x))
+R(Tom)
+-------------
+
+3
+A(John, Mary)
+B(John, Mary)
+C(John, Mary)
+4
+D(John,Mary)
+(~D(John, Mary)| C(John, m))
+(A(x,y)&B(x,Mary))
+((A(X)=>B(X))=>C(X))
+-------------
+
+
+2 
+Ancestor(Liz,Billy) 
+Ancestor(Liz,Bob) 
+6 
+Mother(Liz,Charley) 
+Father(Charley,Billy) 
+((~Mother(x,y)) | Parent(x,y)) 
+((~Father(x,y)) | Parent(x,y)) 
+((~Parent(x,y)) | Ancestor(x,y)) 
+((~(Parent(x,y) & Ancestor(y,z))) | Ancestor(x,z)) 
+
+----------------
+6
+F(Bob)
+H(John)
+~H(Alice)
+~H(John)
+G(Bob)
+G(Alice)
+14
+((D(x,y) &      Q(y)) => C(x,y))
+(A(x) => H(x))
+(D(x,y) => (~H(y)))
+((B(x,y) & C(x,y)) => A(x))
+B(John,Alice)
+B(John,Bob)
+D(John,Alice)
+Q(Bob)
+D(John,Bob)
+(F(x) => G(x))
+(G(x) => H(x))
+(H(x) => F(x))
+(R(x) => H(x))
+R(Tom)
+
+--------------
+4
+Ancestor(Liz,Billy)
+Ancestor(Ram,Shyam)
+Ancestor(Billy,Robert)
+Ancestor(Liz, Robert)
+2
+Ancestor(Liz, x)
+Ancestor(x, Robert)
+
+--------------
+4
+D(x)
+Ancestor(Liz,Billy) 
+Ancestor(Liz,Bob) 
+Mother(Liz,Charley) 
+11
+(P(x,y)&(Q(x)&A(x)))
+((A(x)=>B(x)) => (C(x) => D(x)))
+(B(s) & C(x) )
+Mother(Liz,Charley) 
+Father(Charley,Billy) 
+((~Mother(x,y)) | Parent(x,y)) 
+((~Father(x,y)) | Parent(x,y)) 
+((~Parent(x,y)) | Ancestor(x,y)) 
+((~(Parent(x,y) & Ancestor(y,z))) | Ancestor(x,z))
+((~(Parent(x,y) & Ancestor(y,z))) & Ancestor(x,z)) 
+(A(x)=>B(x))
+
+---------------
+
+5
+A(Bob)
+A(John)
+C(Bob)
+B(Bob)
+G(Alice)
+4
+(P(x) | C(x))
+(A(x)   => B(x)  )
+(C(x)=>A(x))
+C(Bob)
+G(x)
+--------------
+6 
+F(Bob) 
+H(John) 
+~H(Alice) 
+~H(John) 
+G(Bob) 
+G(Tom) 
+14 
+(A(x) => H(x)) 
+(D(x,y) => (~H(y))) 
+((B(x,y) & C(x,y)) => A(x)) 
+B(John,Alice) 
+B(John,Bob) 
+((D(x,y) & Q(y)) => C(x,y)) 
+D(John,Alice) 
+Q(Bob) 
+D(John,Bob) 
+(F(x) => G(x)) 
+(G(x) => H(x)) 
+(H(x) => F(x)) 
+(R(x) => H(x)) 
+R(Tom) 
+
+---------------
+2 
+Ancestor(Liz,Billy) 
+Ancestor(Liz,Bob) 
+8
+((((~Parent(x,y)) & Ancestor(y,z))) | Ancestor(x,z))
+((A(x)   => C(x)  )&(~(C(x)=>D(p))))
+(A(x)  &                B(x))
+Mother(Liz,Charley) 
+Father(Charley,Billy) 
+((~Mother(x,y)) | Parent(x,y)) 
+((~Father(x,y)) | Parent(x,y)) 
+((~Parent(x,y)) | Ancestor(x,y)) 
+
+--------------
